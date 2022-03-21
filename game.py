@@ -8,11 +8,10 @@ guesses = 0
 while True:
     user_guess = int(input("Your guess? "))
     guesses+=1
-    if user_guess != rand_num:
-        if user_guess > rand_num:
-            print("Your guess is too high, try again")
-        else:
-            print("Your guess is too low, try again")
-    else:
+    if user_guess == rand_num:
         print("Well done, "+user_name+"! You found my number in "+str(guesses)+" tries!")
         break
+    elif user_guess > rand_num:
+        print("Your guess is too high, try again")
+    else:
+        print("Your guess is too low, try again")
